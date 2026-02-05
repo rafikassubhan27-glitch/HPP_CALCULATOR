@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI HPP Calculator UMKM</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <h1>HPP Calculator</h1>
+      <p>Harga Jual & Target Harian UMKM</p>
+    </header>
+
+    <section class="card">
+      <h2>Input Data</h2>
+
+      <label>HPP per porsi (Rp)</label>
+      <input type="number" id="hpp" placeholder="contoh: 5000">
+
+      <label>Target laba bulanan (Rp)</label>
+      <input type="number" id="targetLaba" placeholder="contoh: 3000000">
+
+      <label>Margin (%)</label>
+      <input type="number" id="margin" placeholder="contoh: 40">
+
+      <label>Hari jualan / bulan</label>
+      <input type="number" id="hari" placeholder="contoh: 26">
+
+      <button onclick="hitung()">Hitung</button>
+    </section>
+
+    <section class="card result" id="hasil">
+      <h2>Hasil Perhitungan</h2>
+
+      <div class="item">
+        <span>Harga jual</span>
+        <strong id="harga"></strong>
+      </div>
+
+      <div class="item">
+        <span>Laba / porsi</span>
+        <strong id="laba"></strong>
+      </div>
+
+      <div class="item">
+        <span>Target / hari</span>
+        <strong id="perHari"></strong>
+      </div>
+
+      <div class="item">
+        <span>Target / bulan</span>
+        <strong id="perBulan"></strong>
+      </div>
+
+      <p class="note" id="insight"></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
